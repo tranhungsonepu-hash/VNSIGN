@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  
+  /* Standardized Brand Palette based on #086788 */
+  --color-brand-50: #eef7fa;
+  --color-brand-100: #d9eef4;
+  --color-brand-200: #b9dee8;
+  --color-brand-300: #87c4d7;
+  --color-brand-400: #4da1c0;
+  --color-brand-500: #3186a5;
+  --color-brand-600: #086788; /* Primary Brand Color */
+  --brand-600-rgb: 8, 103, 136;
+  --color-brand-700: #06526d;
+  --color-brand-800: #054359;
+  --color-brand-900: #043649;
+  --color-brand-950: #02222e;
+
+  /* Standardized Accent Colors */
+  --color-accent-400: #ffc107;
+  --color-accent-500: #ffb300;
+  --color-accent-600: #ffa000;
+  --color-accent-accent: #ffeb3b;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-white antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(8, 103, 136, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(8, 103, 136, 0.4);
+}
